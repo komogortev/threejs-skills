@@ -1,0 +1,52 @@
+---
+description: Core context for the threejs-skills repository — skill authoring conventions and update policy
+alwaysApply: true
+---
+
+# threejs-skills — Project Context
+
+## What This Repo Is
+
+A public collection of Cursor AI agent skills for Three.js development. Skills are Markdown files that teach an agent a specialized workflow. They auto-trigger when the agent's task description matches the skill's `description` field.
+
+Skills are symlinked from `~/.cursor/skills/<skill-name>/SKILL.md` (Windows: junction points via PowerShell).
+
+## Skills in This Repo
+
+| Skill | Trigger domain |
+|-------|---------------|
+| `threejs-animation` | AnimationClip, AnimationMixer, blending, skeletal animation, morph targets |
+| `threejs-loaders` | GLTF/GLB, FBX, textures, HDR, async loading, caching |
+| `threejs-interaction` | Raycasting, OrbitControls, PointerLock, TransformControls, keyboard input |
+| `threejs-fbx-mixamo` | Mixamo FBX multi-clip pipeline, `@base/player-three`, clip naming, overlay system, landing tiers, water blending |
+
+## Skill File Format
+
+Every skill MUST have:
+
+```markdown
+---
+name: skill-name
+description: Trigger text — specific and actionable. Describes exactly when the skill should fire.
+---
+
+# Skill Title
+
+...content...
+```
+
+## Authoring Rules
+
+- **Concrete over abstract:** Every pattern must show real code, not pseudocode.
+- **Short over long:** Remove anything an agent already knows from Three.js docs. Only document non-obvious patterns.
+- **Sync with production:** `threejs-fbx-mixamo` reflects the exact `@base/player-three` pipeline. Update it whenever the pipeline changes — this skill is the source of truth for agents working on player animation.
+- **No placeholders:** If a section isn't ready, don't include it. Incomplete guidance is worse than none.
+
+## Update Policy
+
+- `threejs-animation`, `threejs-loaders`, `threejs-interaction`: update when Three.js APIs change or a better pattern is identified.
+- `threejs-fbx-mixamo`: update whenever `@base/player-three` adds or changes: FBX naming convention, overlay system, clip resolution regex, new PlayerMode categories (water, climbing, etc.), or animation tier system.
+
+## Ecosystem Connection
+
+`threejs-fbx-mixamo` documents the pipeline in `E:\Projects\SHARED\packages\player-three\`. When the pipeline evolves there, this skill must be updated in the same session or the next one.
