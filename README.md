@@ -4,12 +4,23 @@ Agent skills for Three.js development — auto-triggered reference guides for Cu
 
 ## Skills
 
-| Skill | Description |
-|---|---|
-| [`threejs-animation`](skills/threejs-animation/SKILL.md) | AnimationClip, AnimationMixer, AnimationAction, blending, skeletal animation, morph targets, procedural motion |
-| [`threejs-loaders`](skills/threejs-loaders/SKILL.md) | GLTF/GLB, FBX, textures, HDR, async loading, caching, error handling |
-| [`threejs-interaction`](skills/threejs-interaction/SKILL.md) | Raycasting, camera controls (Orbit/FPS/Pointer Lock), TransformControls, keyboard input |
-| [`threejs-fbx-mixamo`](skills/threejs-fbx-mixamo/SKILL.md) | **Custom** — Mixamo FBX multi-clip pipeline, clip name resolution, AnimationMixer overlay system |
+| Skill | Description | Origin |
+|---|---|---|
+| [`threejs-animation`](skills/threejs-animation/SKILL.md) | AnimationClip, AnimationMixer, AnimationAction, blending, skeletal animation, morph targets, procedural motion | Adapted from [CloudAI-X/threejs-skills](https://github.com/CloudAI-X/threejs-skills) |
+| [`threejs-loaders`](skills/threejs-loaders/SKILL.md) | GLTF/GLB, FBX, textures, HDR, async loading, caching, error handling | Adapted from [CloudAI-X/threejs-skills](https://github.com/CloudAI-X/threejs-skills) |
+| [`threejs-interaction`](skills/threejs-interaction/SKILL.md) | Raycasting, camera controls (Orbit/FPS/Pointer Lock), TransformControls, keyboard input | Adapted from [CloudAI-X/threejs-skills](https://github.com/CloudAI-X/threejs-skills) |
+| [`threejs-fbx-mixamo`](skills/threejs-fbx-mixamo/SKILL.md) | Mixamo FBX multi-clip pipeline, clip name resolution, AnimationMixer overlay system | Original |
+
+## Credits
+
+`threejs-animation`, `threejs-loaders`, and `threejs-interaction` are adapted from
+[CloudAI-X/threejs-skills](https://github.com/CloudAI-X/threejs-skills) — trimmed and
+restructured for conciseness. The original repo has no explicit license; these adaptations
+are included with attribution and all credit for the original content belongs to the
+CloudAI-X contributors.
+
+`threejs-fbx-mixamo` is an original skill documenting the production Mixamo FBX animation
+pipeline used in the `@base/player-three` package.
 
 ## What Are Agent Skills?
 

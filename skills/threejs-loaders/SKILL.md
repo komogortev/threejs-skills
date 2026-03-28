@@ -1,6 +1,7 @@
 ---
 name: threejs-loaders
 description: Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.
+attribution: Adapted from CloudAI-X/threejs-skills (https://github.com/CloudAI-X/threejs-skills). All credit for original content to CloudAI-X contributors.
 ---
 
 # Three.js Loaders
